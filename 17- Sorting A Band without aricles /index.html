@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>17- Sorting A Band without articles</title>
+</head>
+<body>
+    <style>
+        body     {
+            font-family: 'Montserrat', sans-serif;
+        }
+      
+        li {
+            list-style: none;
+        }
+    </style>
+    <ul id='bands'></ul>
+    <script>
+        const bands = [
+            'The Plot in You',
+            'The Devils wears Prada',
+            'Pierce the Veil',
+            'Norma Jean',
+            'The Bled',
+            'Say Anything',
+            'The Midway State',
+            'We Came as Romans',
+            'Counterparts',
+            'Oh, Sleeper',
+            'Skylite Drive',
+            'Anywhere But Here',
+            'An Old Dog'
+        ];
+
+        function strip(bandName){
+            return bandName.replace(/^(a | the |an) /i, '').trim();
+        }
+
+        const sortedBands = bands.sort((a,b) => strip(a) > strip (b) ? 1 :-1);
+        
+        document.querySelector('#bands').innerHTML 
+        = sortedBands
+        .map(band => `<li>${band}</li>`).
+        join('');
+
+    </script>
+</body>
+</html>

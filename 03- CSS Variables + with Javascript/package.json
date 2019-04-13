@@ -1,0 +1,8 @@
+{
+  "name": "03",
+  "version": "1.0.0",
+  "description": "CSS Variables and Javascript",
+  "main": "index.js",
+  "author": "Ernie",
+  "license": "MIT"
+}
