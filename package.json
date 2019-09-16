@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4"
+  }
+}
